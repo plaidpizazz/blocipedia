@@ -1,3 +1,8 @@
+## Blocipedia: A basic wikipedia style site to
+learn the fundamentals of web development and rails.
+
+Made with ingenuity in Chicago!
+
 == README
 
 This README would normally document whatever steps are necessary to get the
