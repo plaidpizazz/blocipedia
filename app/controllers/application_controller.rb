@@ -3,4 +3,7 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   # before_action :authenticate_user!
   protect_from_forgery with: :exception
+
+  #Devise: redirect to login page if user not logged in
+  before_action :authenticate_user!
 end
