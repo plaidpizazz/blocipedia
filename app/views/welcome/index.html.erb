@@ -5,21 +5,26 @@
     <br>
     <br>
     <div class="text-center signup-content">
-      <p>Create and share markdown wikis</p>
+      <h2>Create and share</h2>
       <br>
-      <%= link_to "Sign Up", new_user_registration_path, :class => 'btn btn-signup' %>
+      <%= link_to "Sign Up", new_user_registration_path, :class => 'btn btn-primary btn-lg' %>
     </div>
   </div>
 </div>
-<div class="float-left free-plan">
-  <p>Create as many public </p>
-  <p>wikis with the free plan!</p>
-  <br>
-  <!-- <%= link_to "Free Plan", :class => 'btn btn-free' %> -->
-</div>
-<div class="float-right paid-plan">
-  <p>Create as many private </p>
-  <p>wikis with the premium plan!</p>
-  <br>
-  <!-- <%= link_to "Premium Plan", :class => 'btn btn-premium' %> -->
+<br>
+<br>
+<br>
+<div class="container btn-group btn-group-sm" role="group">
+  <div class="col-lg-6 text-center free-plan">
+    <h4>Create as many public <br> <br>
+    wikis with the free plan!</h4>
+    <br>
+    <%= link_to "Free Plan", :class => 'btn btn-primary btn-sm' %>
+  </div>
+  <div class="col-lg-6 text-center paid-plan">
+    <h4>Create as many private <br> <br>
+    wikis with the premium plan!</h4>
+    <br>
+    <%= link_to "Premium Plan", :class => 'btn btn-primary btn-sm' %>
+  </div>
 </div>

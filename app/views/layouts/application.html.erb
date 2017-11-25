@@ -9,17 +9,29 @@
 </head>
 <body>
   <div class="container">
-    <ul class="nav nav-tabs">
-      <li><%= link_to "Blocipedia", welcome_index_path %></li>
-      <li><%= link_to "About", welcome_about_path %></li>
-      <li class="pull-right">
+    <ul class="nav nav-tabs navbar-center">
+      <li><%= link_to "Blocipedia", root_path %></li>
+      <li><%= link_to "About", about_path %></li>
+      <li class="nav nav-tabs navbar-right">
         <% if user_signed_in? %>
           <p>Hello, <%= current_user.name %> - <%= link_to "Sign Out", destroy_user_session_path, :method => 'delete' %></p>
         <% else %>
-          <li><%= link_to "Sign Up", new_user_registration_path, :class => 'navbar-link' %></li>
-          <li><%= link_to "Sign In", new_user_session_path, :class => 'navbar-link' %></li>
+          <li class="nav nav-tabs navbar-right"><%= link_to "Sign Up", new_user_registration_path, :class => 'navbar-link' %></li>
+          <li class="nav nav-tabs navbar-right"><%= link_to "Sign In", new_user_session_path, :class => 'navbar-link' %></li>
         <% end %>
       </ul>
+
+      <% if flash[:notice] %>
+        <div class="alert alert-success">
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
+          <%= flash[:notice] %>
+        </div>
+      <% elsif flash[:alert] %>
+        <div class="alert alert-warning">
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
+          <%= flash[:alert] %>
+        </div>
+      <% end %>
 
     <%= yield %>
   </div>
