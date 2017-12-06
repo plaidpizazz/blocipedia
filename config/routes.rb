@@ -1,12 +1,18 @@
 Rails.application.routes.draw do
-  resources :wikis
-
-  root 'welcome#index'
 
   devise_for :users, controllers: { registrations: "registrations" }
 
+  resources :wikis
+
+  resources :charges, only: [:new, :create]
+
+  resources :users
+
+  match "users/:id/downgrade" => "users#downgrade", :as => "downgrade_user", via: [:get, :post]
+
   get 'about' => 'welcome#about'
 
+  root 'welcome#index'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
