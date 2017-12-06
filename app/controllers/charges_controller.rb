@@ -10,7 +10,7 @@ class ChargesController < ApplicationController
   end
 
   def create
-    
+
     # Creates a Stripe Customer object, for associating
     # with the charge
     customer = Stripe::Customer.create(
@@ -25,6 +25,8 @@ class ChargesController < ApplicationController
       description: "Travelpedia Membership - #{current_user.email}",
       currency: 'usd'
     )
+
+    current_user.update_attribute(:role, 'premium')
 
     flash[:notice] = "Thanks for all the money, #{current_user.email}! Feel free to pay me again."
     redirect_to root_path # or wherever
