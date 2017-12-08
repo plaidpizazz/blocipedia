@@ -13,5 +13,12 @@
  *= require_tree .
  *= require_self
  */
+
+// $brand-primary: #5440D3 !default;
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+body {
+  // background: url('/assets/background_plane_in_sky.jpg');
+}
