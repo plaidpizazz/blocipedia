@@ -1,4 +1,4 @@
-## Travelpedia
+# Travelpedia
 
 ### Saas Wiki Collaboration Tool for All Things Travelpedia
 
