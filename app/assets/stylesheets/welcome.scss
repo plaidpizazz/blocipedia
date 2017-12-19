@@ -2,40 +2,40 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-// #header {
-//   text-align: center;
-//   padding-top: 5rem;
-//   padding-bottom: 15rem;
-//   background: url('/assets/globes_background.jpg');
-//   background-position: center;
-//   background-size: cover;
-//   text-shadow: 0 3px 5px rgba(0,0,0,.4);
-//   width: 100%;
-// }
+#header {
+  text-align: center;
+  padding-top: 5rem;
+  padding-bottom: 15rem;
+  background-position: center;
+  background-size: cover;
+  text-shadow: 0 3px 5px rgba(0,0,0,.4);
+  // width: 100%;
+}
 
 .container {
-  background-color: #EEE;
+  background-color: #EEEEEE;
 }
 
-.free-plan {
-  width: 50%;
-  float: left;
-  position: relative;
-  margin-top: 10%;
-  text-align: center;
-  padding-left: 100px;
-  font-size: 25px;
-}
+// .free-plan {
+//   width: 50%;
+//   float: left;
+//   position: relative;
+//   margin-top: 10%;
+//   text-align: center;
+//   // padding-left: 100px;
+//   font-size: 5px;
+// }
 
-.paid-plan {
-  width: 50%;
-  float: right;
-  position: relative;
-  margin-top: 10%;
-  text-align: center;
-  padding-left: 100px;
-  font-size: 25px;
-}
+// .paid-plan {
+//   width: 50%;
+//   float: right;
+//   position: relative;
+//   margin-top: 10%;
+//   text-align: center;
+//   padding-left: 100px;
+//   font-size: 25px;
+// }
+
 .accounts-block {
   width: 50%;
   margin-left: auto;
@@ -44,6 +44,7 @@
   background: #e2dede88;
   margin-bottom: 10rem;
   padding-bottom: 3rem;
+  min-width: 270px;
 }
 
 .accounts-block h3 {
@@ -51,16 +52,15 @@
   margin-bottom: 2rem;
   margin-bottom: 4rem;
   margin-top: 0;
-  background: #64a0db;
+  background: #337CB5;
   padding: 1rem 0;
-  color: #4d4d4d;
+  color: #FFFFFF;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .40);
-
 }
 
 #accounts h4 {
   font-size: 5rem;
-  color: #64a0db;
+  color: #337CB5;
   margin-bottom: 3rem;
   margin-top: 0;
 }

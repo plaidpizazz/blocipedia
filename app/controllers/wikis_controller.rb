@@ -16,7 +16,8 @@ class WikisController < ApplicationController
   def create
     @wiki = Wiki.new
     @wiki.title = params[:wiki][:title]
-    @wiki.body = params[:wiki][:title]
+    @wiki.body = params[:wiki][:body]
+    @wiki.private = params[:wiki][:private]
 
     if @wiki.save
       flash[:notice] = "Wiki was saved."
@@ -50,7 +51,7 @@ class WikisController < ApplicationController
 
     if @wiki.destroy
       flash[:notice] = "\"#{@wiki.title}\" was deleted successfully."
-      redirect_to wikis_path
+      redirect_to wiki_path
     else
       flash.now[:alert] = "There was an error deleting the wiki."
       render :show
