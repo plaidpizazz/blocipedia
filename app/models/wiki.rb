@@ -1,5 +1,6 @@
 class Wiki < ActiveRecord::Base
   belongs_to :user
+  has_many :collaborators, dependent: :destroy 
 
   default_scope { order('created_at DESC') }
 
@@ -10,5 +11,5 @@ class Wiki < ActiveRecord::Base
 
   validates :title, length: { minimum: 2 }, presence: true
   validates :body, length: { minimum: 5 }, presence: true
-  # validates :user, presence: true 
+  # validates :user, presence: true
 end
