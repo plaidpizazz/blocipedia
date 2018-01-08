@@ -5,7 +5,11 @@
     <% @wikis.each do |wiki| %>
       <div class="media">
         <div class="media-body">
-          <% if current_user.premium? || current_user.admin? %>
+          <h4 class="media-heading">
+            <%= link_to wiki.title, wiki %>
+          </h4> 
+
+          <!-- <% if current_user.premium? || current_user.admin? %>
             <h4 class="media-heading">
               <%= link_to wiki.title, wiki %>
             </h4>
@@ -13,7 +17,7 @@
             <h4 class="media-heading">
               <%= link_to wiki.title, wiki %>
             </h4>
-          <% end %>
+          <% end %> -->
 
         </div>
       </div>

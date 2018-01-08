@@ -14,6 +14,14 @@
     <ul class="nav nav-tabs navbar-center">
       <li><%= link_to "Travelpedia", root_path %></li>
       <li><%= link_to "About", about_path %></li>
+      <li><%= link_to "Public Wikis", wikis_path %></li>
+      <% if user_signed_in? %>
+        <li><%= link_to "My Wikis", user_path(current_user) %></li>
+          <% if current_user.standard? %>
+            <li><%= button_to "Upgrade", charges_path, class: 'btn btn-success' %></li>
+          <% end %>
+      <% end %>
+
       <li class="nav nav-tabs navbar-right">
         <% if user_signed_in? %>
           <p>Hello, <%= current_user.name %> - <%= link_to "Edit Account", edit_user_registration_path, :class => 'navbar-link' %> | <%= link_to "Sign Out", destroy_user_session_path, :method => 'delete' %></p>

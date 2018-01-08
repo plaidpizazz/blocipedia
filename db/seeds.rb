@@ -52,7 +52,7 @@ premium2 = User.create!(
   role: 'premium'
 )
 
-premium = User.create!(
+premium3 = User.create!(
   name: 'Premium User3',
   email: 'premium3@example.com',
   password: 'password',
@@ -68,7 +68,7 @@ standard = User.create!(
   role: 'standard'
 )
 
-standard = User.create!(
+standard2 = User.create!(
   name: 'Standard User2',
   email: 'standard2@example.com',
   password: 'password',
@@ -76,7 +76,7 @@ standard = User.create!(
   role: 'standard'
 )
 
-standard = User.create!(
+standard3 = User.create!(
   name: 'Standard User3',
   email: 'standard3@example.com',
   password: 'password',
